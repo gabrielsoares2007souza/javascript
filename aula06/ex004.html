@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sal = Number(window.prompt('Qual seu salário: '))
+        var nome = window.prompt('Qual seu nome: ')
+        document.writeln(sal + '<br> hoje é sabado')
+        document.write(`o seu ${sal.toFixed(3).replace('.',',')} e seu nome em maiúsculo é ${nome.toUpperCase()} <br> por outro lado em minúsculo fica ${nome.toLowerCase()}, já o seu nome ${nome} possui ${nome.length} letras , ${sal.toLocaleString('pt-BR',{style:'currency',currency:'USD'})}`)
+    </script>
+</body>
+</html>
