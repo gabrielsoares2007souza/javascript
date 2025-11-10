@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interatividade com JS</title>
+    <style>
+        body{
+            font: 1.2em Arial;
+        }
+        div#conteiner{
+            background-color: #6bcc6b;
+            width: 200px;
+            height: 200px;
+            color: blue;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div id="conteiner" onmouseout="quandoSair()">
+    </div>
     
+
+    <script>
+        
+        //configurando evento pelo elemento html que desejo, desse jeito não uso o addEventListener()..
+        //OBS: esse jeito polui o html e tira a semantica de que o html é só para conteudo, melhor fazer diretamente pelo script
+        var conteiner = document.getElementById('conteiner')
+        function quandoSair(){
+            conteiner.innerHTML = '<strong>Saiu!</strong>'
+        }
+        
+
+        //evento por diretamente pelo script com a propriedade addEventListener()
+        var conteiner = document.querySelector('#conteiner');
+        conteiner.addEventListener('mouseenter', quandoEntrar)
+        function quandoEntrar(){
+            conteiner.innerHTML = '<strong>Entrou!</strong>'
+        }
+
+        //posso ter uma função anônima(função sem nome), e posso usar ela pra configurar o bloco de códigos do evento, usando a propriedade addEventListener()
+        var conteiner = document.querySelector('#conteiner');
+        addEventListener('click', () => {
+            conteiner.innerHTML = '<strong>Clicou!</strong>'
+            conteiner.style.backgroundColor = 'red'
+            conteiner.style.color = 'black'
+        })
+        addEventListener('mousemove', () => {
+            conteiner.style.backgroundColor = '#6bcc6b'
+        })
+    </script>
 </body>
 </html>
