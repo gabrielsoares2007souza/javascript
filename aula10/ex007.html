@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+           background-color: rgba(164, 250, 221, 0.329); 
+           font: normal 1em Arial;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 25% auto;
+            height: 200px;
+            width: 80%;
+            background-color: bisque;
+            padding: 10px;
+            position: relative;
+        }
+        form h1{
+            font-size: 1.4em;
+            text-align: center;
+            padding-top: 10px;
+        }
+        form #caixa1 label,#caixa2 label{
+            font-size: 1.1em;
+        }
+        form #caixa1 input,#caixa2 input{
+            border: none;
+            background-color: inherit;
+        }
+        form #caixa1 hr,#caixa2 hr{
+            width: 100px;
+            position: absolute;
+            left: 150px;
+        }
+        form input.calcular{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        <h1>Somando números</h1>
+        <div id="caixa1">
+            <label for="txtn1">Primeiro Número:</label>
+            <input type="number" name="txtn1" id="txtn1">
+            <hr>
+        </div>
+        <div id="caixa2">
+            <label for="txtn2">Segundo Número:</label>
+            <input type="number" name="txtn2" id="txtn2">
+            <hr>
+        </div>
+        <input class="calcular" type="button" value="Calcular" onclick="somar()">
+        <input class="calcular" type="reset" value="Limpar" onclick="limpar()">
+        <hr>
+        <div id="res"></div>
+    </form>
+
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.querySelector('#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1+n2
+            res.innerHTML = `O valor da soma entre ${n1} e ${n2} é ${s}`
+        }
+
+        function limpar(){
+            var res = window.document.querySelector('#res')
+            res.innerHTML = ''
+        }
+    </script>
+</body>
+</html>
