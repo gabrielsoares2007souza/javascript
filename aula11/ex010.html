@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema DETRAN</h1>
+    <label for="ivel">Sua velocidade em Km/h:</label>
+    <input type="number" name="vel" id="ivel">
+    <input type="button" value="Enviar" onclick="enviou()">
+    <p id="texto"></p>
+
+    <script>
+        function enviou(){
+            var vel = document.querySelector('#ivel')
+            var texto = document.querySelector('#texto')
+            var v = Number(vel.value)
+            texto.innerHTML = `Sua velocidade é ${v} km/h <br>`
+            if(v>40){
+                texto.innerHTML += 'Atenção!!! <br> Voçê está acima da velocidade permitida'
+            }else{
+                texto.innerHTML += 'Parabens!!! <br> Voçê está na velocidade correta'
+            }
+        }
+    </script>
+</body>
+</html>

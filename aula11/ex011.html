@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    <label for="ipais">País de origem:</label>
+    <input type="text" name="pais" id="ipais">
+    <input type="button" value="Enviar" onclick="enviou()">
+    <p class="res"></p>
+
+
+    <script>
+        function enviou(){
+            var pais = document.querySelector('#ipais')
+            var País = pais.value
+            var res = document.getElementsByClassName('res')[0]
+            res.innerHTML = `Você é do país ${País} <br>`
+            if(País =='brasil'||'Brasil'){
+                res.innerHTML += 'Você é Brasileiro'
+            }else{
+                res.innerHTML += 'Você é Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
