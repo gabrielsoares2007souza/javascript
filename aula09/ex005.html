@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            font: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hoje é domingo</h1>
+    <p class="p1">Amanhã é segunda</p>
+    <p id="p1">E depois será terça</p>
+    <a href="https://ge.globo.com" target="_blank" rel="nofollow">clique aqui..</a>
+    <script>
+        var par = document.querySelector('#p1');
+        var link = document.querySelector('a')
+        par.innerHTML = '<strong>Vitor Gabriel</strong> ff'
+        par.style.backgroundColor = 'blue' ;
+        par.style.fontSize = '30px';
+        par.textContent = 'Absolute Cinema!';
+        link.setAttribute("href", "https://g1.globo.com");
+    </script>
+</body>
+</html>
