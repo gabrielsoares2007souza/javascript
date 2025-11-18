@@ -3,22 +3,41 @@ var inicio = document.querySelector('#inum')
 var fim = document.querySelector('#fnum')
 var passo = document.querySelector('#ipasso')
 var res = document.querySelector('#res')
-
 butao.addEventListener('click', () =>{
-    if(passo.value == 0){
+    if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length ==0){
+        alert('Atenção!, há campos que não foram preenchidos')
+    }else{
         res.innerHTML = ''
-        res.style.fontSize = '28px'
-        passo.value = 1
-        alert('O valor no campo PASSO está zero, irei considerar como passo 1')
-        for( var c = inicio.value; c<= fim.value; c++){
-            res.innerHTML += `${c} &#x1F449 `
-        }
-    }
-    if(passo.value > 0){
-        res.innerHTML = ` passo vale ${passo.value}, inicio vale ${inicio.value}, e fim vale ${fim.value}`
-        res.style.fontSize = '28px'
-        for(var  i= inicio.value; i<=fim.value; i++){
-            res.innerHTML += `${i} `
+        res.style.fontSize = '1.2em'
+        var i = Number(inicio.value)
+        var f = Number(fim.value)
+        var p = Number(passo.value)
+        if(p == 0){
+            alert('passo está com zero, irei considerar passo 1')
+            p = 1
+            if(i<f){
+            for(var c = i; c<=f ; c+=p){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+            res.innerHTML += `\u{1F3C1}`
+            }else{
+                for(var c = i; c>=f; c-=p){
+                    res.innerHTML += `${c} \u{1F449}`
+                }
+            res.innerHTML += `\u{1F3C1}`
+            }
+        } else{
+            if(i<f){
+            for(var c = i; c<=f ; c+=p){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+            res.innerHTML += `\u{1F3C1}`
+            }else{
+                for(var c = i; c>=f; c-=p){
+                    res.innerHTML += `${c} \u{1F449}`
+                }
+            res.innerHTML += `\u{1F3C1}`
+            }
         }
     }
 })
