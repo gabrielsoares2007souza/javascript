@@ -12,8 +12,8 @@ butao.addEventListener('click', () =>{
         var i = Number(inicio.value)
         var f = Number(fim.value)
         var p = Number(passo.value)
-        if(p == 0){
-            alert('passo está com zero, irei considerar passo 1')
+        if(p == 0|| p<0){
+            alert('passo está com zero ou está menor que zero, irei considerar passo 1')
             p = 1
             if(i<f){
             for(var c = i; c<=f ; c+=p){
