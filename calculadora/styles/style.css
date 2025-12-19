@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+html{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(300deg , #1d291a , #569864, #457823); 
+}
+#bloco-calculadora{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+
+
+.btn-number{
+    padding: 34px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    background-color: rgba(255, 255, 255, 0.26);
+    font-size: 1.3em;
+}
+
+.resultado{
+    background-color: rgba(255, 255, 255, 0.377);
+    width: 336px;
+    font-size: 2.8em;
+    text-align: right;
+    padding: 0px 10px;
+}
+
+.double{
+    width: 166px;
+}
+
+.limpar{
+    width: 336px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1d291a94;
+    border: none;
+}
+
+.column{
+    background-color: rgba(255, 68, 0, 0.781);
+}
+
+.equals{
+    background-color: rgba(30, 30, 70, 0.651);
+}
+
+.btn-number:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+.column:hover{
+    background-color: orange;
+}
+
+.equals:hover{
+    background-color: rgb(0, 0, 255);
+}
+
+.limpar:hover{
+    background-color: #192c1d;
+}
