@@ -11,4 +11,3 @@ cursos.map((el)=>{
         evt.stopPropagation()
     })
 })
-
