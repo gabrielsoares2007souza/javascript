@@ -36,10 +36,14 @@ body{
 
 .cursos{
     background-color: rgba(141, 141, 141, 0.190);
-    padding: 8px;
+    padding: 2px;
     border-radius: 10px;
     border: 3px solid rgba(128, 128, 128, 0.74);
     margin: 0px 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: default;
 }
 
 .button-copy{
@@ -65,4 +69,9 @@ body{
 .selecionado{
     border: 3px solid rgba(255, 0, 0, 0.74);
     background-color: rgba(255, 0, 0, 0.349);
+}
+
+#trash{
+    font-size: 25px;
+    cursor: pointer;
 }

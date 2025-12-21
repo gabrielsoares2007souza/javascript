@@ -1,11 +1,21 @@
-const caixa1 = document.getElementById('caixa1')
+const caixa = document.getElementById('caixa1')
+const cursos = ['HTML' , 'CSS' , "JavaScript" , "PHP" , 'Java' , "MySQL"]
 
-const cursos = ["HTML" , "CSS" , "JAVASCRIPT" , "PHP" , "REACT" , "MySQL"]
+const addTrash = (elem)=>{
+    const trash = document.createElement('div')
+    trash.setAttribute('id' , 'trash')
+    trash.innerHTML = '&#x1F5D1'
+    elem.appendChild(trash)
+    trash.addEventListener('click' , (evt)=>{
+        caixa.removeChild(evt.target.parentElement)
+    })
+}
 
-
-cursos.map((el)=>{
+    cursos.map((el)=>{
     const newElement = document.createElement('div')
-    newElement.innerHTML = el
     newElement.setAttribute('class' , 'cursos')
-    caixa1.appendChild(newElement)
+    newElement.innerHTML = el
+    addTrash(newElement)
+    caixa.appendChild(newElement)
 })
+
