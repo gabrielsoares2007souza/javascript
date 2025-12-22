@@ -21,7 +21,7 @@ body{
 }
 #conteiner{
     display: grid;
-    grid-template: 1fr / 15% 1fr 15%;
+    grid-template: 1fr / 10% 1fr 10%;
     justify-items: center;
 }
 
