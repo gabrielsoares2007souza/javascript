@@ -7,6 +7,8 @@ const remover = document.getElementById('remover')
 const selecionado = document.getElementById('selecionado')
 const texto = document.querySelector('#itext')
 
+let condicao = 'nao'
+
 // const radio = ()=>{
 //     const inputsRadio = [...document.querySelectorAll('input[type=radio]')]
 //     const radioSelecionado = inputsRadio.filter((elem)=>{
@@ -104,9 +106,11 @@ adicionarDepois.addEventListener('click' , ()=>{
 
 adicionar.addEventListener('click' , ()=>{
     if(texto.value != ''){
-        const retornoDaCaixaTexto = criarElement(texto.value)
-        caixa2.appendChild(retornoDaCaixaTexto)
+            const retornoDaCaixaTexto = criarElement(texto.value)
+            caixa2.appendChild(retornoDaCaixaTexto)
     }else{
         alert('digite algo')
     }
 })
+
+
