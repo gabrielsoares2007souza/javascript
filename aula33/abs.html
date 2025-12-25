@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">apertar</button>
+    <p id="res"></p>
+    <script>
+        const selecao = [1 ,2 , 4 , 5]
+        const btn = document.querySelector('#btn')
+        const res =document.querySelector('#res')
+        btn.addEventListener('click' , ()=>{
+            const verificar = selecao.find((e,i)=>{
+                if(e == 2){
+                    res.innerHTML = `Resultado: ${e} na posicao: ${i}`
+                    return e
+                }
+            })
+        })
+    </script>
+</body>
+</html>

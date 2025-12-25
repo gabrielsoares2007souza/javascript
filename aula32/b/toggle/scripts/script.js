@@ -6,24 +6,8 @@ const adicionar = document.getElementById('adicionar')
 const remover = document.getElementById('remover')
 const selecionado = document.getElementById('selecionado')
 const texto = document.querySelector('#itext')
+let c = 0
 
-let condicao = 'nao'
-
-// const radio = ()=>{
-//     const inputsRadio = [...document.querySelectorAll('input[type=radio]')]
-//     const radioSelecionado = inputsRadio.filter((elem)=>{
-//         return elem.checked
-//     })
-//     if(radioSelecionado[0] != undefined){
-//         const opçaoEscolhida = radioSelecionado[0]
-
-//         const cursoSelecionado = opçaoEscolhida.parentNode.previousSibling
-        
-//         return cursoSelecionado
-//     }else{
-//         alert('Seleciona algum curso!')
-//     }
-// }
 const retirarSelecao = ()=>{
     const cursosQueForamSelecionados = [...document.querySelectorAll('.selecionado')]
 
@@ -79,7 +63,10 @@ adicionarAntes.addEventListener('click', ()=>{
         const rad = retirarSelecao()
         const nodeSelecionado = rad
         if(nodeSelecionado != undefined){
-            caixa2.insertBefore(retornoDaCaixaTexto , nodeSelecionado )
+            verificar(texto.value)
+            if (c!=1){
+                caixa2.insertBefore(retornoDaCaixaTexto , nodeSelecionado)
+            }
         }else{
             alert('selecione algum curso')
         }
@@ -95,7 +82,10 @@ adicionarDepois.addEventListener('click' , ()=>{
         const rad = retirarSelecao()
         const nodeSelecionado = rad
         if(nodeSelecionado != undefined){
-            caixa2.insertBefore(retornoDaCaixaTexto , nodeSelecionado.nextSibling )
+            verificar(texto.value)
+            if (c!=1){
+                caixa2.insertBefore(retornoDaCaixaTexto , nodeSelecionado.nextSibling )
+            }
         }else{
             alert('Selecione algum curso!')
         }
@@ -106,11 +96,27 @@ adicionarDepois.addEventListener('click' , ()=>{
 
 adicionar.addEventListener('click' , ()=>{
     if(texto.value != ''){
+        verificar(texto.value)
+        if (c!=1){
             const retornoDaCaixaTexto = criarElement(texto.value)
             caixa2.appendChild(retornoDaCaixaTexto)
+        }
     }else{
         alert('digite algo')
     }
+    
 })
 
+const verificar = (cursoEscrito)=>{
+    const selecao = [...document.querySelectorAll('.cursos')]
 
+    const ret = selecao.find((el,i)=>{
+       if(el.innerHTML.toUpperCase() == cursoEscrito.toUpperCase()){
+        alert('Esse curso ja foi adicionado')
+        c = 1
+       }else{
+        c = 2
+       }
+    })
+    
+}
