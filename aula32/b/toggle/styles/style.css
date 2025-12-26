@@ -14,7 +14,9 @@ html{
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+body{
+    background-color: rgb(1, 1, 59);
+}
 #conteiner-principal{
     display: flex;
     justify-content: space-around;
@@ -27,13 +29,13 @@ html{
     display: flex;
     flex-flow: column wrap;
     gap: 5px;
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.199);
 }
 
 .button{
     border: none;
     color: white;
-    background-color: rgb(19, 19, 97);
+    background-color: rgb(8, 49, 2);
     padding: 12px;
     border-radius: 10px;
     width: 180px;
@@ -57,6 +59,7 @@ html{
 
 .texto > label{
     text-align: center;
+    color: white;
 }
 
 .texto input{
