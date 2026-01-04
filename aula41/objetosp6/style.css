@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+
+html{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+*,
+*::After,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#conteiner{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 10px;
+}
+
+.contForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.contForm > .diminuir{
+    width: 300px;
+}
+
+.contForm > input{
+    border: none;
+    background-color: burlywood;
+    border-radius: 20px;
+    height: 10px;
+    padding: 20px;
+}
+
+.contForm > label{
+    margin-left: 15px;
+}
+
+.contForm > #btnAdd{
+    border: none;
+    background-color: brown;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+#answer{
+    min-height: 15px;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.newElement{
+    border: 2px solid gray;
+    padding: 5px;
+    width: 120px;
+}
