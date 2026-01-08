@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando POO</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div id="conteiner">
+        <div class="caixaInputs">
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" autocomplete="off" placeholder="Nome do Carro" autofocus>
+        </div>
+        <div class="caixaInputs">
+            <label for="iportas">Portas</label>
+            <input type="number" name="portas" id="iportas" autocomplete="off" placeholder="Quantidade de Portas">
+        </div>
+        <div class="caixaInputs">
+            <label for="iblindagem">Blidagem</label>
+            <input type="number" name="blindagem" id="iblindagem" autocomplete="off" value="0">
+        </div>
+        <div class="caixaInputs">
+            <label for="imunicao">Munição</label>
+            <input type="number" name="municao" id="imunicao" autocomplete="off" value="0" >
+        </div>
+        <div class="caixaInputs" id="caixaRadio">
+            <div>
+                <p>Tipo</p>
+            </div>
+            <div>
+                <label for="imilitar">Militar</label>
+                <input type="radio" name="tiposCarros" id="imilitar">
+                <label for="inormal">Normal</label>
+                <input type="radio" name="tiposCarros" id="inormal" checked >
+            </div>
+        </div>
+        <button id="btnAdd">Adicionar</button>
+        <div id="res"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+html{
+    height: 100vh;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#conteiner{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+}
+
+div#conteiner > div.caixaInputs{
+    display: flex;
+    flex-direction: column;
+}
+
+div#conteiner > div.caixaInputs > label{
+    margin-left: 5px;
+}
+div#conteiner > div.caixaInputs > input{
+    width: 230px;
+    border: 3px solid rgb(46, 95, 46);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+div#conteiner > div#caixaRadio{
+    gap: 5px;
+    margin-left: 5px;
+}
+
+div#conteiner > div#caixaRadio p{
+    font-size: 1.3em;
+    font-weight: bolder;
+    border-bottom: 3px dashed black;
+    display: inline-block;
+}
+
+button#btnAdd{
+    width: 230px;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: 5px solid white;
+    outline: 2px solid red;
+
+}
+
+div#res{
+    min-height: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px 5px ;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
+
+.confRes{
+    border: 2px dashed blueviolet;
+    border-radius: 6px;
+    padding: 2px;
+}
